@@ -74,5 +74,17 @@ accept current vs incoming changes
 save file
 git add .
 git commit
+git push
+
+process
+first create
+pull
+add
+commit
+push
+
+git diff
+remember to do branch per feature.
+
 
  
