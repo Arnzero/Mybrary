@@ -11,7 +11,7 @@ const bookSchema = new mongoose.Schema({
     description: {
         type: String,
     },
-    publishedDate: {
+    publishDate: {
         type: Date,
         required: true
     },
@@ -21,13 +21,13 @@ const bookSchema = new mongoose.Schema({
     },
     createdAt: {
         type: Date,
-        required: true,
-        default: Date.now
+        required: true, // change to true
+        default: Date.now()
 
     },
     coverImageName: {
         type: String,
-        required: true
+        required: false
     },
     author:  {
         type: mongoose.Schema.Types.ObjectId,

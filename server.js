@@ -6,6 +6,7 @@ const express = require('express')
 const app = express()
 const expressLayouts = require('express-ejs-layouts')
 //const bodyParser = require('body-parser')         //bodyParser deprecated
+//const multer = require('multer') // duplicate?
 
 const indexRouter = require('./routes/index')
 const authorRouter = require('./routes/author')
@@ -18,8 +19,8 @@ app.set('layout', 'layouts/layout') //header and footers ?
 app.use(expressLayouts)
 app.use(express.static('public'))
 //app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }))
-app.use([express.json(), express.urlencoded({ extended: true })])
-
+//app.use([express.json(), express.urlencoded({ extended: true })])
+app.use(express.urlencoded({extended: true}))
 const mongoose = require('mongoose')
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 
