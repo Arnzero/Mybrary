@@ -5,6 +5,8 @@ git add *full file name*->
             **Head**
                 git push
                     **GitHub**
+                        git push heroku main/master
+                            **Heroku**
 
 git remote add origin ssh_url
 * this tells git that we have a remote head called origin to ssh_url* 

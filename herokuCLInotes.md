@@ -10,7 +10,7 @@ Commit your code to the repository and deploy it to Heroku using Git.
 
 $ git add .
 $ git commit -am "make it better"
-$ git push heroku master NOTE: check if it is main or not
+$ **git push heroku main/master** NOTE: check if it is main or not
 
 actually pull --rebase
          git push

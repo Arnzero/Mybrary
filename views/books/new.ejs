@@ -1,4 +1,7 @@
 <h2>New Book</h2>
+<!-- enctype ="multipart/form-data"
+        removed because our FilePond
+            since we are uploading a single string vs a file -->
 <form action="/books" method="POST" enctype="multipart/form-data">
     <%- include('_form_fields') %>
     <a href="/books">Cancel</a>
