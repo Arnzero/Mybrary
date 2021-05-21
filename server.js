@@ -10,7 +10,7 @@ const expressLayouts = require('express-ejs-layouts')
 const methodOverride = require('method-override')
 
 const indexRouter = require('./routes/index')
-const authorRouter = require('./routes/author')
+const authorRouter = require('./routes/authors')
 const bookRouter = require('./routes/books')
 
 
@@ -34,6 +34,15 @@ db.once('open', () => console.log("Connected to Mongoose"))
 app.use('/', indexRouter)
 app.use('/authors', authorRouter) // /authors/ and /authors/new
 app.use('/books', bookRouter)
+
+
+
+/*
+app.use(function (req, res, next) {
+  res.status(404).send("Sorry can't find that!")
+})
+
+*/
 
 // http://localhost:3000
 app.listen(process.env.PORT || 3000)

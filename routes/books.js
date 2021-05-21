@@ -45,8 +45,8 @@ router.post('/', async (req, res) => {
 
   try {
     const newBook = await book.save()
-    // res.redirect(`books/${newBook.id}`)
-    res.redirect(`books`)
+    res.redirect(`books/${newBook.id}`)
+
   } catch {
     renderNewPage(res, book, true)
   }
